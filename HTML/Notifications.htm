@@ -1,0 +1,45 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+	<head>
+        <link rel="Stylesheet" type="text/css" href="Style.css" />
+		<title>CoreMonitor - Notifications</title>
+	</head>
+	<body>
+   <div id="header">  
+        <div id="headertext">
+            <h3>
+                v<!--CoreMonitorVersion--></h3>
+            <a href="http://localhost:56302"><h1>
+                CoreMonitor</h1></a>
+        </div>
+    </div>
+    <div id="body">
+        <h2>Notifications API</h2>
+        <div id="document">
+            Part of the CoreMonitor WebAPI is a Notifications interface which provides the ability to send notifications
+            to the device through web requests. <br />
+            Web requests are made using either HTTP GET or HTTP POST requests to the <a href="http://localhost:56302/notifications/show">/notifications/show</a> page and contain the following parameters
+            <ul>
+            <li>title - The title that will appear on the notification, should not be longer than 20 characters</li>
+            <li>text - The text that will appear on the notification. This may include line breaks but shouldn't be more than 5 lines long</li>
+            <li>displayperiod - The amount of time in milliseconds that the notification will be displayed to the user, or 0 to wait for the user to dismiss it</li>
+            </ul>
+            The following are examples of well structured requests:
+            <ul>
+            <li>
+            <a href="http://localhost:56302/notifications/show?title=Test&text=This%20is%20a%20test%20notification&displayperiod=1000">http://localhost:56302/notifications/show?title=Test&text=This%20is%20a%20test%20notification&displayperiod=1000</a><br />
+            Shows a notification with the following: { Title = "Test", Text = "This is a test notification", DisplayPeriod = 1000 }
+            </li>
+            </ul>
+            Calls to the <a href="http://localhost:56302/notifications/show">/notifications/show</a> page will return a text based representation of the status of the function call. This
+            may include one of the following:
+            <ul>
+            <li>success</li><li>failed</li></ul>
+        </div>
+    </div>
+    <div id="footer">
+        Powered by <a href="http://www.sierrasoftworks">Sierra Softworks</a> Technology <br />
+        Copyright &copy; Benjamin Pannell 2011
+    </div>
+	</body>
+</html>

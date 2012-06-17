@@ -1,0 +1,116 @@
+﻿body
+{
+    font-family: Arial;
+    margin: 0px;
+    font-size:10pt;
+    background: #eee;
+}
+
+h1 
+{
+    font-size: 20pt;
+    padding: 10px;
+    margin: 0px;
+}
+
+h2 
+{
+    font-size: 16pt;
+    padding: 5px;
+    margin: 0px;
+}
+
+h3 
+{
+    font-size: 12pt;
+    font-weight: bold;
+    padding: 2px;
+    margin: 0px;
+}
+
+#header 
+{
+    background: #fff;    
+    background: -webkit-linear-gradient(#fff, #eee);
+    background: -moz-linear-gradient(#fff, #eee);
+    background: -o-linear-gradient(#fff, #EEE);
+    border-radius: 0px 0px 5px 5px;
+    box-shadow: 0px 0px 10px #888;
+    text-align: left;
+    color: #000;
+    margin:0px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+    width: 960px;
+    height: 60px;
+}
+
+#headertext h3
+{
+    text-align:right;
+    font-size: 10pt;
+    padding-top:0px;
+    margin-top: -10px;
+    float:right;
+}
+
+#headertext a,
+#headertext a:visited,
+#headertext a:link
+{
+    text-decoration: none;
+    color: #000;
+    text-shadow: 0px 0px 5px #aaa;
+}
+
+#icon
+{
+    float:left;
+    vertical-align:middle;
+    margin-top:10px;
+}
+
+#headertext
+{
+    width:100%;
+}
+
+#footer 
+{
+    text-align: right;
+    color: #888;
+    width:960px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 7pt;
+}
+
+#footer a:link,
+#footer a:visited,
+#footer a:active 
+{
+    color: #888;
+    text-decoration: none;
+}
+
+#footer a:hover
+{
+    text-decoration: underline;
+}
+
+#body
+{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    width: 960px;
+    background: #fff;
+    background: -webkit-linear-gradient(#fff, #ddd);
+    background: -moz-linear-gradient(#fff, #ddd);
+    background: -o-linear-gradient(#fff, #ddd);
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px #888;
+    padding: 30px;
+}

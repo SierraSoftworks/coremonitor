@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Updates xmlns="SierraLib.Updates.Advanced">
+  <Update version="2.8.0.0" os="Win32" platform="Any" osversion="5.1.0.0">
+    <Name>CoreMonitor v2.8</Name>
+    <Description>
+      Numerous fixes and tweaks to improve usability and functionality.
+    </Description>
+    <ChangeLog>
+      - No longer uses the version in the name of the applet in order to reduce
+        problems on systems after updating CoreMonitor
+      - New background rendering code to improve performance and memory
+        usage.
+      - Slightly modified UI with nicer effects (drop shadows etc.) with no performance
+        hit (thanks to new drawing code)
+      - Clock added to the user interface
+      - Massive improvement in responsiveness of the CPU usage update code
+      - Better update code with the ability to target individual platforms directly
+      - Fixed some crashes and bugs
+      - Updated WebAPI and documentation pages
+      - Updated HTTPHost code to improve stability
+    </ChangeLog>
+    <Downloads>
+      <Server name="Sierra Softworks" address="http://sierrasoftworks.com" downloadpath="downloads/coremonitor"/>
+      
+      <Download url="2.8.0.0/CoreMonitor64.exe" filename="CoreMonitor.exe" platform="x64" path="/" size="288768" md5sum="bUlTSfss2wOjbtLxo8iqXg=="/>
+      <Download url="2.8.0.0/CoreMonitor32.exe" filename="CoreMonitor.exe" platform="x86" path="/" size="289280" md5sum="H3w4XaI4umS6IpHI0eh66g=="/>
+      <Download url="2.8.0.0/SierraLib.Drawing.dll" path="/" size="20480" md5sum="MEOfoE2O6q9nmJITnsfQAw=="/>
+      <Download url="2.8.0.0/SierraLib.IO.dll" path="/" size="238080" md5sum="mYsknkqD2r/NAmDuLL8jAQ=="/>
+      <Download url="2.8.0.0/SierraLib.LCD.dll" path="/" size="57344" md5sum="L6I3IOKgK52i/3vyBX0i3Q=="/>
+      <Download url="2.8.0.0/SierraLib.LCD.Logitech.Native32.dll" platform="x86" path="/" size="5632" md5sum="LagmxYrlIXH/iQ/KlGv+8w=="/>
+      <Download url="2.8.0.0/SierraLib.LCD.Logitech.Native64.dll" platform="x64" path="/" size="6656" md5sum="SX/Nmz+sR9FpjRJKXy6aEw=="/>
+      <Download url="2.8.0.0/SierraLib.Security.dll" path="/" size="67584" md5sum="Xgp1W7+FFo7p3iRLuK3i8w=="/>
+      <Download url="2.8.0.0/SierraLib.Updates.dll" path="/" size="41472" md5sum="Y0wXJpUrJXyKQGjmhHef6A=="/>
+      <Download url="2.8.0.0/SierraLib.Windows.dll" path="/" size="499200" md5sum="jli4LTzsuYn0dk6/9qXqNA=="/>
+    </Downloads>
+    <Info>http://www.sierrasoftworks.com/coremonitor</Info>
+  </Update>
+  <Update version="2.6.0.0" os="Win32" platform="Any" osversion="5.1.0.0">
+    <Name>CoreMonitor v2.6</Name>
+    <Description>
+      Adds the ability to specify the length of time for which a notification
+      is displayed as well as adding automatic update functionality.
+    </Description>
+    <ChangeLog>
+      - Automatic update functionality
+      - Notification display times can be controlled through the API
+      - Fix to prevent multiple instances of CoreMonitor from starting
+        which would cause both to fail.
+    </ChangeLog>
+    <Downloads>
+      <Server name="Sierra Softworks" address="http://sierrasoftworks.com" downloadpath="downloads/coremonitor"/>
+      <Download url="2.6.0.0x86/CoreMonitor.exe" path="/" size="0" md5sum="" platform="x86"/>
+      <Download url="2.6.0.0/SierraLib.dll" path="/" size="0" md5sum=""/>
+      <Download url="2.6.0.0x64/CoreMonitor.exe" path="/" size="0" md5sum="" platform="x64"/>
+    </Downloads>
+    <Info>http://www.sierrasoftworks.com/coremonitor</Info>
+  </Update>
+  <Update version="2.5.0.0" os="Win32" platform="x64" osversion="5.1.0.0">
+    <Name>CoreMonitor v2.5 x64</Name>
+    <Description>
+      Completely new notifications API with support for registering
+      custom menu items and receiving notifications when they are
+      used.
+    </Description>
+    <ChangeLog>
+      - New notifications API with support for registering custom menus.
+      - Sockets based to allow cross framework communication.
+      - Supports sending icons for notification messages
+      - Notifications now have rounded corners
+      - Notifications can now display icons to make understanding them
+        easier.
+      - New update code supporting automatic replacement of updated
+        files.
+    </ChangeLog>
+    <Downloads>
+      <Server name="Sierra Softworks" address="http://sierrasoftworks.com" downloadpath="downloads/coremonitor"/>
+      <Download url="2.5.0.0/CoreMonitor.exe" path="/" size="0" md5sum=""/>
+      <Download url="2.5.0.0/SierraLib.dll" path="/" size="0" md5sum=""/>
+    </Downloads>
+    <Info>http://www.sierrasoftworks.com/coremonitor</Info>
+  </Update>
+</Updates>
