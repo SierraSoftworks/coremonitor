@@ -23,3 +23,25 @@ C:\Users\SPARTAN\Documents\Visual Studio 2010\Projects\G19-i7\CoreMonitor2\obj\R
 C:\Users\SPARTAN\Documents\Visual Studio 2010\Projects\G19-i7\CoreMonitor2\obj\Release\ResGen.write.1.tlog
 C:\Users\SPARTAN\Documents\Visual Studio 2010\Projects\G19-i7\CoreMonitor2\obj\Release\CoreMonitor.exe
 C:\Users\SPARTAN\Documents\Visual Studio 2010\Projects\G19-i7\CoreMonitor2\obj\Release\CoreMonitor.pdb
+D:\Programming\C#\Projects\G19-i7\CoreMonitor2\bin\Release\CoreMonitor.exe.config
+D:\Programming\C#\Projects\G19-i7\CoreMonitor2\obj\Release\CoreMonitor.exe
+D:\Programming\C#\Projects\G19-i7\CoreMonitor2\obj\Release\CoreMonitor.pdb
+D:\Programming\C#\Projects\G19-i7\CoreMonitor2\obj\Release\CoreMonitor2.csprojResolveAssemblyReference.cache
+D:\Programming\C#\Projects\G19-i7\CoreMonitor2\obj\Release\CoreMonitor.Properties.Resources.resources
+D:\Programming\C#\Projects\G19-i7\CoreMonitor2\obj\Release\CoreMonitor2.csproj.GenerateResource.Cache
+D:\Programming\C#\Projects\G19-i7\CoreMonitor2\bin\Release\SierraLib.LCD.Logitech.Native32.dll
+D:\Programming\C#\Projects\G19-i7\CoreMonitor2\bin\Release\SierraLib.LCD.Logitech.Native64.dll
+D:\Programming\C#\Projects\G19-i7\CoreMonitor2\bin\Release\CoreMonitor.exe
+D:\Programming\C#\Projects\G19-i7\CoreMonitor2\bin\Release\CoreMonitor.pdb
+D:\Programming\C#\Projects\G19-i7\CoreMonitor2\bin\Release\SierraLib.CSharp.dll
+D:\Programming\C#\Projects\G19-i7\CoreMonitor2\bin\Release\SierraLib.Drawing.dll
+D:\Programming\C#\Projects\G19-i7\CoreMonitor2\bin\Release\SierraLib.IO.dll
+D:\Programming\C#\Projects\G19-i7\CoreMonitor2\bin\Release\SierraLib.LCD.dll
+D:\Programming\C#\Projects\G19-i7\CoreMonitor2\bin\Release\SierraLib.Net.dll
+D:\Programming\C#\Projects\G19-i7\CoreMonitor2\bin\Release\SierraLib.Windows.dll
+D:\Programming\C#\Projects\G19-i7\CoreMonitor2\bin\Release\SierraLib.CSharp.pdb
+D:\Programming\C#\Projects\G19-i7\CoreMonitor2\bin\Release\SierraLib.Drawing.pdb
+D:\Programming\C#\Projects\G19-i7\CoreMonitor2\bin\Release\SierraLib.IO.pdb
+D:\Programming\C#\Projects\G19-i7\CoreMonitor2\bin\Release\SierraLib.LCD.pdb
+D:\Programming\C#\Projects\G19-i7\CoreMonitor2\bin\Release\SierraLib.Net.pdb
+D:\Programming\C#\Projects\G19-i7\CoreMonitor2\bin\Release\SierraLib.Windows.pdb
