@@ -74,21 +74,6 @@ namespace CoreMonitor.Controls
 
             Visible = false;
 
-            SierraLib.Updates.Advanced.Updates.UpdateListAvailable += (o, e) =>
-                {
-                    if (e.LatestVersion.ApplicationVersion > SierraLib.AssemblyInformation.GetAssemblyVersion())
-                    {
-                        ((LcdGdiText)DisplayObjects[2]).Text = "An update is available [" + e.LatestVersion.ApplicationVersion.ToString(2) + "]";
-                        ((LcdGdiText)DisplayObjects[3]).Text = "Press 'OK' to download";
-                        updateChanged = true;
-                    }
-                    else
-                    {
-                        ((LcdGdiText)DisplayObjects[2]).Text = "No update is available";
-                        ((LcdGdiText)DisplayObjects[3]).Text = "Press 'OK' to close";
-                    }
-                };
-
             LCDDevice.SoftButtonsChanged += (o, e) =>
                 {
                     if (Visible)

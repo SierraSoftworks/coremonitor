@@ -73,8 +73,17 @@ namespace CoreMonitor.Displays
         {
             MySettings = new Settings();
             if (File.Exists(Path.Combine(Environment.GetEnvironmentVariable("AppData"), "Sierra Softworks\\CoreMonitor\\settings.xml")))
-                MySettings = SierraLib.XML.Serialization.Deserialize<Settings>(Path.Combine(Environment.GetEnvironmentVariable("AppData"), "Sierra Softworks\\CoreMonitor\\settings.xml"));
-
+            {                
+                try
+                {
+                    MySettings = SierraLib.XML.Serialization.Deserialize<Settings>(Path.Combine(Environment.GetEnvironmentVariable("AppData"), "Sierra Softworks\\CoreMonitor\\settings.xml"));
+                }
+                catch
+                {
+                    MySettings = new Settings();
+                }
+            }
+                
             if(!Directory.Exists(Path.Combine(Environment.GetEnvironmentVariable("AppData"), "Sierra Softworks\\CoreMonitor")))
                 Directory.CreateDirectory(Path.Combine(Environment.GetEnvironmentVariable("AppData"), "Sierra Softworks\\CoreMonitor"));
 
@@ -516,14 +525,6 @@ namespace CoreMonitor.Displays
                 };
             Menu.Items.Add(volumeTimeMenu);
 
-            MenuItem updateMenu = new MenuItem("Check for Updates");
-            updateMenu.ItemClicked += (o, e) =>
-                {
-                    SierraLib.Updates.Advanced.Updates.UpdateServers.Add("http://www.sierrasoftworks.com/downloads/coremonitor/Updates.xml");
-                    SierraLib.Updates.Advanced.Updates.GetUpdates();
-                };
-            Menu.Items.Add(updateMenu);
-
             /*
             MenuItem shutdownMenu = new MenuItem("Shutdown After", "Disabled", new string[] { "Disabled", "1 min", "5 min", "10 min", "30 min", "1 hour" });
             shutdownMenu.ValueChanged += (o, e) =>
@@ -553,7 +554,7 @@ namespace CoreMonitor.Displays
             MenuItem aboutMenu = new MenuItem("About");
             aboutMenu.ItemClicked += (o, e) =>
                 {
-                    System.Diagnostics.Process.Start("http://www.sierrasoftworks.com/coremonitor");
+                    System.Diagnostics.Process.Start("https://sierrasoftworks.com/coremonitor");
                 };
 
             Menu.Items.Add(aboutMenu);

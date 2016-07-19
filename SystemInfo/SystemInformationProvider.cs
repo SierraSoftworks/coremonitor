@@ -5,6 +5,7 @@ using CoreAudioApi;
 using System.Diagnostics;
 using System.Management;
 using System.Threading;
+using System.Text.RegularExpressions;
 
 namespace CoreMonitor.SystemInfo
 {
@@ -201,21 +202,7 @@ namespace CoreMonitor.SystemInfo
 
         string GetProcessorName(string processorName,bool showManufacturer = false)
         {
-            string tmp = processorName;
-            if (tmp.StartsWith("Intel(R)"))
-            {
-                string manufacturer = "Intel";
-                string model = tmp.Replace("Intel(R) ", "");
-                model = model.Remove(model.IndexOf("CPU"));
-                model = model.Replace("(TM)", "");
-                model += tmp.Substring(tmp.IndexOf("         "), tmp.IndexOf("@") - tmp.IndexOf("         ")).Trim();
-                model = model.Trim();
-
-                if (showManufacturer)
-                    return manufacturer + " " + model;
-                return model;
-            }
-            return tmp;
+            return Regex.Replace(processorName, @"\(.*?\)|(\s)\s+|@.*|CPU", "", RegexOptions.ExplicitCapture);
         }
 
         public SystemInformationProvider() :

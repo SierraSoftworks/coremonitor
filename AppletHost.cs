@@ -9,7 +9,7 @@ using System.Diagnostics;
 
 namespace CoreMonitor
 {
-    sealed class AppletHost
+    sealed class AppletHost : IDisposable
     {
         LcdApplet LCDApplet { get; set; }
         Version AppletVersion { get; set; }
@@ -30,6 +30,12 @@ namespace CoreMonitor
 
 
         public AppletHost()
+        {
+            
+        }
+        
+
+        public void Initialize()
         {
 
             IPCServer = new Interop.APIServer();
@@ -52,38 +58,36 @@ namespace CoreMonitor
 #endif
 
             LCDApplet.DeviceArrival += (o, e) =>
-                {
-                    //Add a new device to the device list or
-                    //reconnect an existing device.
-                    if (e.DeviceType == LcdDeviceType.Qvga)
-                        qvgaArrived = true;
-                    else
-                        monoArrived = true;
+            {
+                //Add a new device to the device list or
+                //reconnect an existing device.
+                if (e.DeviceType == LcdDeviceType.Qvga)
+                    qvgaArrived = true;
+                else
+                    monoArrived = true;
 
-                    waitARE.Set();
-                };
+                waitARE.Set();
+            };
 
             LCDApplet.DeviceRemoval += (o, e) =>
-                {
-                    //Remove the relevant device from the update list
-                };
+            {
+                //Remove the relevant device from the update list
+            };
 
             LCDApplet.ConnectionDisrupted += (o, e) =>
-                {
-                    //Disable/disconnect all displays and close their threads
-                    exit = true;
-                    
-                };
+            {
+                //Disable/disconnect all displays and close their threads
+                exit = true;
+
+            };
 
             LCDApplet.IsEnabledChanged += (o, e) =>
-                {
-                    //Stop or restart the draw and update loops.
-                    pause = !LCDApplet.IsEnabled;
-                };
-
+            {
+                //Stop or restart the draw and update loops.
+                pause = !LCDApplet.IsEnabled;
+            };
 
         }
-        
 
         
         public bool restarting = false;
@@ -153,8 +157,16 @@ namespace CoreMonitor
         public void Stop()
         {
             exit = true;
-            IPCServer.StopServer();
-            SystemInformation.StopUpdating();
+        }
+
+        public void Dispose()
+        {
+            if(IPCServer != null)
+                IPCServer.StopServer();
+            if(LCDApplet != null)
+                LCDApplet.Disconnect();
+            if(SystemInformation != null)
+                SystemInformation.StopUpdating();
         }
     }
 }

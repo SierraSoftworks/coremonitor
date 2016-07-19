@@ -6,7 +6,6 @@ using System.Reflection;
 using System.Threading;
 using System.Diagnostics;
 using SierraLib.Windows.Win7API.ApplicationServices;
-using SierraLib.Net.CrashReporting;
 
 namespace CoreMonitor
 {
@@ -21,7 +20,7 @@ namespace CoreMonitor
 
             Application.SetUnhandledExceptionMode(UnhandledExceptionMode.CatchException);
 
-            Application.ThreadException += new System.Threading.ThreadExceptionEventHandler(Application_ThreadException);
+            Application.ThreadException += Application_ThreadException;
                         
             AppDomain.CurrentDomain.UnhandledException += (o, e) =>
                 {
@@ -30,52 +29,28 @@ namespace CoreMonitor
 
             if (Environment.OSVersion.Version.Major >= 6)
                 ApplicationRestartRecoveryManager.RegisterForApplicationRestart(new RestartSettings("", RestartRestrictions.NotOnReboot));
-
-
-            SierraLib.Updates.Automatic.AutomaticUpdates automatedUpdates = new SierraLib.Updates.Automatic.AutomaticUpdates("Sierra Softworks - CoreMonitor");
-
-            bool exitNow = false;
-
-            SierraLib.Updates.Automatic.AutomaticUpdates.ExitApplication += (o, e) =>
-                {
-                    exitNow = true;
-                };
-
-            automatedUpdates.UpdateCompleted += (o, e) =>
-                {
-                    
-                };
-
-            automatedUpdates.MultipleInstancesDetected += (o, e) =>
-                {
-                    exitNow = true;
-                    Environment.Exit(0);
-                };
-
-            automatedUpdates.ProcessCommandLine(Environment.CommandLine);
-
-            if (exitNow)
-                return;
-
-            AppletHost applet = new AppletHost();
+                        
             try
             {
-                bool createdNew = false;
-                using (Mutex mutex = new Mutex(true, "Sierra Softworks - CoreMonitor", out createdNew))
+                using (AppletHost applet = new AppletHost())
                 {
-                    if (!createdNew)
-                        return;
-
-                    applet.Start();
+                    bool createdNew = false;
+                    using (Mutex mutex = new Mutex(true, "Sierra Softworks - CoreMonitor", out createdNew))
+                    {
+                        if (!createdNew)
+                            return;
+                        applet.Initialize();
+                        applet.Start();
+                    }
                 }
             }
             catch(Exception e)
             {
-                
+                StoreException(e);
             }
         }
 
-        static void StoreException(Exception ex)
+        internal static void StoreException(Exception ex)
         {
             if (!Directory.Exists(Environment.ExpandEnvironmentVariables("%AppData%\\Sierra Softworks\\CoreMonitor\\Crash Logs")))
                 Directory.CreateDirectory(Environment.ExpandEnvironmentVariables("%AppData%\\Sierra Softworks\\CoreMonitor\\Crash Logs"));
@@ -85,8 +60,11 @@ namespace CoreMonitor
             StreamWriter sw = new StreamWriter(Environment.ExpandEnvironmentVariables("%AppData%\\Sierra Softworks\\CoreMonitor\\Crash Logs\\Crash - " + DateTime.Now.ToString("dd.MM.yyyy HH.mm") + ".txt"));
             sw.WriteLine("Unhandled Exception:\n" + ex.Message);
             sw.WriteLine();
-            sw.WriteLine("Target Site:\n" + ex.TargetSite.DeclaringType.FullName + ex.TargetSite.Name);
-            sw.WriteLine();
+            if (ex.TargetSite != null)
+            {
+                sw.WriteLine("Target Site:\n" + ex.TargetSite.DeclaringType.FullName + ex.TargetSite.Name);
+                sw.WriteLine();
+            }
             sw.WriteLine("Source:\n" + ex.Source);
             sw.WriteLine();
             sw.WriteLine("Stack Trace:\n" + ex.StackTrace);
@@ -100,36 +78,6 @@ namespace CoreMonitor
             //    GoogleAnalytics.FireTrackingEventAsync("http://apptracking.sierrasoftworks.com/CoreMonitor", "Application Crashes", ex.StackTrace, "CoreMonitor", -10);
                                    
 #endif
-
-            if (Environment.OSVersion.Version.Major >= 6 && SierraLib.Windows.Win7API.Net.NetworkListManager.IsConnectedToInternet)
-            {
-                try
-                {
-                    WebCrashReport.SendCrashReport("http://sierrasoftworks.com/CrashReporting/ReportCrash.php",
-                    new SierraLib.Net.Web.MD5Credentials("apptracking", "password"),
-                    "http://apptracking.sierrasoftworks.com",
-                    (int)WebCrashReport.Applications.CoreMonitor, ex);
-                }
-                catch
-                {
-
-                }
-            }
-            else if (Environment.OSVersion.Version.Major < 6)
-            {
-                try
-                {
-                    WebCrashReport.SendCrashReport("http://sierrasoftworks.com/ReportCrash.php",
-                    new SierraLib.Net.Web.MD5Credentials("apptracking", "password"),
-                    "http://apptracking.sierrasoftworks.com",
-                    (int)WebCrashReport.Applications.CoreMonitor, ex);
-                }
-                catch
-                {
-
-                }
-            }
-
         }
 
 

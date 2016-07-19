@@ -23,7 +23,7 @@ namespace CoreMonitor.Interop
 
         public event EventHandler<Notification> NotificationDisplayRequest = null;
         
-        public WebHost WebServer;
+        public WebHostAsync WebServer;
 
         public List<APIClient> Clients { get; private set; }
 
@@ -36,19 +36,17 @@ namespace CoreMonitor.Interop
             Clients = new List<APIClient>();
             Menus = new List<MenuDetails>();
 
-            WebServer = new WebHost(IPAddress.Loopback, 56302);
+            WebServer = new WebHostAsync(IPAddress.Loopback, 56302);
 
-            WebServer.MalformedRequest += new WebHost.MalformedRequestEventHandler(WebServer_MalformedRequest);
-            WebServer.ClientConnected += new WebHost.ClientEventHandler(WebServer_ClientConnected);
-            WebServer.ClientDisconnected += new WebHost.ClientEventHandler(WebServer_ClientDisconnected);
+            WebServer.MalformedRequest += WebServer_MalformedRequest;
+            WebServer.ClientConnected += WebServer_ClientConnected;
+            WebServer.ClientDisconnected += WebServer_ClientDisconnected;
 
             WebServer.DefaultPage = new WebPage("/", new RequestProcessor((request) => {
                 return new SierraLib.Net.Web.WebResponse(CoreMonitor.Properties.Resources.HomePage.Replace("<!--CoreMonitorVersion-->",SierraLib.AssemblyInformation.GetAssemblyVersion().ToString()),"text/html",request);
             }));
             WebServer.Pages.Add(WebServer.DefaultPage);
             
-            WebServer.Error404Page = WebServer.DefaultPage;
-
             WebServer.Pages.Add(new WebPage("/notifications", CoreMonitor.Properties.Resources.Notifications.Replace("<!--CoreMonitorVersion-->",SierraLib.AssemblyInformation.GetAssemblyVersion().ToString())));
             WebServer.Pages.Add(new WebPage("/information", CoreMonitor.Properties.Resources.Information.Replace("<!--CoreMonitorVersion-->", SierraLib.AssemblyInformation.GetAssemblyVersion().ToString())));
 
@@ -140,21 +138,19 @@ namespace CoreMonitor.Interop
             return null;
         }
 
-        bool WebServer_MalformedRequest(string request, SierraLib.Net.Web.WebClient client)
+        void WebServer_MalformedRequest(string request, SierraLib.Net.Web.WebClient client)
         {
             if (IsXMLRequest(request))
             {
                 ProcessXML(request, getClient(client));
-                return false;
             }
-
-            return true;
         }
 
         public void StartServer()
         {
             exit = false;
             Thread serverLoopThread = new Thread(serverLoop);
+            WebServer.Start();
             serverLoopThread.Start();
         }
 
@@ -166,7 +162,6 @@ namespace CoreMonitor.Interop
 
         void serverLoop()
         {
-            WebServer.Start();
             while (!exit)
             {
                 try
