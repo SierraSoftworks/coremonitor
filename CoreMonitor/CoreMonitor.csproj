@@ -209,27 +209,27 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SierraLib.CSharp\SierraLib.CSharp\SierraLib.CSharp.csproj">
+    <ProjectReference Include="..\..\SierraLib.CSharp\SierraLib.CSharp\SierraLib.CSharp.csproj">
       <Project>{35abfad5-7196-4197-bba6-889e178e79f2}</Project>
       <Name>SierraLib.CSharp</Name>
     </ProjectReference>
-    <ProjectReference Include="..\SierraLib.Drawing\SierraLib.Drawing\SierraLib.Drawing.csproj">
+    <ProjectReference Include="..\..\SierraLib.Drawing\SierraLib.Drawing\SierraLib.Drawing.csproj">
       <Project>{c106d0d9-e435-45c9-b6b2-be1d5bdc388c}</Project>
       <Name>SierraLib.Drawing</Name>
     </ProjectReference>
-    <ProjectReference Include="..\SierraLib.IO\SierraLib.IO\SierraLib.IO.csproj">
+    <ProjectReference Include="..\..\SierraLib.IO\SierraLib.IO\SierraLib.IO.csproj">
       <Project>{6e3964da-ab7b-4650-8e07-d43d9c7fe8ab}</Project>
       <Name>SierraLib.IO</Name>
     </ProjectReference>
-    <ProjectReference Include="..\SierraLib.LCD\SierraLib.LCD\SierraLib.LCD.csproj">
+    <ProjectReference Include="..\..\SierraLib.LCD\SierraLib.LCD\SierraLib.LCD.csproj">
       <Project>{d21841e8-1be3-4761-925f-71595e2015be}</Project>
       <Name>SierraLib.LCD</Name>
     </ProjectReference>
-    <ProjectReference Include="..\SierraLib.Net\SierraLib.Net\SierraLib.Net.csproj">
+    <ProjectReference Include="..\..\SierraLib.Net\SierraLib.Net\SierraLib.Net.csproj">
       <Project>{6197be34-bf99-48d7-a58b-7acd81206cc8}</Project>
       <Name>SierraLib.Net</Name>
     </ProjectReference>
-    <ProjectReference Include="..\SierraLib.Windows\SierraLib.Windows\SierraLib.Windows.csproj">
+    <ProjectReference Include="..\..\SierraLib.Windows\SierraLib.Windows\SierraLib.Windows.csproj">
       <Project>{CAC707A0-C944-4DA1-85B4-6F959EB618D8}</Project>
       <Name>SierraLib.Windows</Name>
     </ProjectReference>
