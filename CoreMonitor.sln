@@ -1,0 +1,166 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28809.33
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreMonitor", "CoreMonitor.csproj", "{EC232EE6-E192-4F5F-B379-D50E5DB49119}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SierraLib.LCD", "..\SierraLib.LCD\SierraLib.LCD\SierraLib.LCD.csproj", "{D21841E8-1BE3-4761-925F-71595E2015BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SierraLib.IO", "..\SierraLib.IO\SierraLib.IO\SierraLib.IO.csproj", "{6E3964DA-AB7B-4650-8E07-D43D9C7FE8AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SierraLib.Drawing", "..\SierraLib.Drawing\SierraLib.Drawing\SierraLib.Drawing.csproj", "{C106D0D9-E435-45C9-B6B2-BE1D5BDC388C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SierraLib.CSharp", "..\SierraLib.CSharp\SierraLib.CSharp\SierraLib.CSharp.csproj", "{35ABFAD5-7196-4197-BBA6-889E178E79F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SierraLib.Net", "..\SierraLib.Net\SierraLib.Net\SierraLib.Net.csproj", "{6197BE34-BF99-48D7-A58B-7ACD81206CC8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SierraLib.Windows", "..\SierraLib.Windows\SierraLib.Windows\SierraLib.Windows.csproj", "{CAC707A0-C944-4DA1-85B4-6F959EB618D8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+		WindowsPhone7|Any CPU = WindowsPhone7|Any CPU
+		WindowsPhone7|x64 = WindowsPhone7|x64
+		WindowsPhone7|x86 = WindowsPhone7|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EC232EE6-E192-4F5F-B379-D50E5DB49119}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC232EE6-E192-4F5F-B379-D50E5DB49119}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC232EE6-E192-4F5F-B379-D50E5DB49119}.Debug|x64.ActiveCfg = Debug|x64
+		{EC232EE6-E192-4F5F-B379-D50E5DB49119}.Debug|x64.Build.0 = Debug|x64
+		{EC232EE6-E192-4F5F-B379-D50E5DB49119}.Debug|x86.ActiveCfg = Debug|x86
+		{EC232EE6-E192-4F5F-B379-D50E5DB49119}.Debug|x86.Build.0 = Debug|x86
+		{EC232EE6-E192-4F5F-B379-D50E5DB49119}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC232EE6-E192-4F5F-B379-D50E5DB49119}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC232EE6-E192-4F5F-B379-D50E5DB49119}.Release|x64.ActiveCfg = Release|x64
+		{EC232EE6-E192-4F5F-B379-D50E5DB49119}.Release|x64.Build.0 = Release|x64
+		{EC232EE6-E192-4F5F-B379-D50E5DB49119}.Release|x86.ActiveCfg = Release|x86
+		{EC232EE6-E192-4F5F-B379-D50E5DB49119}.Release|x86.Build.0 = Release|x86
+		{EC232EE6-E192-4F5F-B379-D50E5DB49119}.WindowsPhone7|Any CPU.ActiveCfg = Release|Any CPU
+		{EC232EE6-E192-4F5F-B379-D50E5DB49119}.WindowsPhone7|Any CPU.Build.0 = Release|Any CPU
+		{EC232EE6-E192-4F5F-B379-D50E5DB49119}.WindowsPhone7|x64.ActiveCfg = Release|x64
+		{EC232EE6-E192-4F5F-B379-D50E5DB49119}.WindowsPhone7|x64.Build.0 = Release|x64
+		{EC232EE6-E192-4F5F-B379-D50E5DB49119}.WindowsPhone7|x86.ActiveCfg = Release|x86
+		{EC232EE6-E192-4F5F-B379-D50E5DB49119}.WindowsPhone7|x86.Build.0 = Release|x86
+		{D21841E8-1BE3-4761-925F-71595E2015BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D21841E8-1BE3-4761-925F-71595E2015BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D21841E8-1BE3-4761-925F-71595E2015BE}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{D21841E8-1BE3-4761-925F-71595E2015BE}.Debug|x64.Build.0 = Debug|Any CPU
+		{D21841E8-1BE3-4761-925F-71595E2015BE}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D21841E8-1BE3-4761-925F-71595E2015BE}.Debug|x86.Build.0 = Debug|Any CPU
+		{D21841E8-1BE3-4761-925F-71595E2015BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D21841E8-1BE3-4761-925F-71595E2015BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D21841E8-1BE3-4761-925F-71595E2015BE}.Release|x64.ActiveCfg = Release|Any CPU
+		{D21841E8-1BE3-4761-925F-71595E2015BE}.Release|x64.Build.0 = Release|Any CPU
+		{D21841E8-1BE3-4761-925F-71595E2015BE}.Release|x86.ActiveCfg = Release|Any CPU
+		{D21841E8-1BE3-4761-925F-71595E2015BE}.Release|x86.Build.0 = Release|Any CPU
+		{D21841E8-1BE3-4761-925F-71595E2015BE}.WindowsPhone7|Any CPU.ActiveCfg = WindowsPhone7|Any CPU
+		{D21841E8-1BE3-4761-925F-71595E2015BE}.WindowsPhone7|Any CPU.Build.0 = WindowsPhone7|Any CPU
+		{D21841E8-1BE3-4761-925F-71595E2015BE}.WindowsPhone7|x64.ActiveCfg = WindowsPhone7|Any CPU
+		{D21841E8-1BE3-4761-925F-71595E2015BE}.WindowsPhone7|x64.Build.0 = WindowsPhone7|Any CPU
+		{D21841E8-1BE3-4761-925F-71595E2015BE}.WindowsPhone7|x86.ActiveCfg = WindowsPhone7|Any CPU
+		{D21841E8-1BE3-4761-925F-71595E2015BE}.WindowsPhone7|x86.Build.0 = WindowsPhone7|Any CPU
+		{6E3964DA-AB7B-4650-8E07-D43D9C7FE8AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E3964DA-AB7B-4650-8E07-D43D9C7FE8AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E3964DA-AB7B-4650-8E07-D43D9C7FE8AB}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{6E3964DA-AB7B-4650-8E07-D43D9C7FE8AB}.Debug|x64.Build.0 = Debug|Any CPU
+		{6E3964DA-AB7B-4650-8E07-D43D9C7FE8AB}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{6E3964DA-AB7B-4650-8E07-D43D9C7FE8AB}.Debug|x86.Build.0 = Debug|Any CPU
+		{6E3964DA-AB7B-4650-8E07-D43D9C7FE8AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E3964DA-AB7B-4650-8E07-D43D9C7FE8AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E3964DA-AB7B-4650-8E07-D43D9C7FE8AB}.Release|x64.ActiveCfg = Release|Any CPU
+		{6E3964DA-AB7B-4650-8E07-D43D9C7FE8AB}.Release|x64.Build.0 = Release|Any CPU
+		{6E3964DA-AB7B-4650-8E07-D43D9C7FE8AB}.Release|x86.ActiveCfg = Release|Any CPU
+		{6E3964DA-AB7B-4650-8E07-D43D9C7FE8AB}.Release|x86.Build.0 = Release|Any CPU
+		{6E3964DA-AB7B-4650-8E07-D43D9C7FE8AB}.WindowsPhone7|Any CPU.ActiveCfg = Release|Any CPU
+		{6E3964DA-AB7B-4650-8E07-D43D9C7FE8AB}.WindowsPhone7|Any CPU.Build.0 = Release|Any CPU
+		{6E3964DA-AB7B-4650-8E07-D43D9C7FE8AB}.WindowsPhone7|x64.ActiveCfg = Release|Any CPU
+		{6E3964DA-AB7B-4650-8E07-D43D9C7FE8AB}.WindowsPhone7|x64.Build.0 = Release|Any CPU
+		{6E3964DA-AB7B-4650-8E07-D43D9C7FE8AB}.WindowsPhone7|x86.ActiveCfg = Release|Any CPU
+		{6E3964DA-AB7B-4650-8E07-D43D9C7FE8AB}.WindowsPhone7|x86.Build.0 = Release|Any CPU
+		{C106D0D9-E435-45C9-B6B2-BE1D5BDC388C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C106D0D9-E435-45C9-B6B2-BE1D5BDC388C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C106D0D9-E435-45C9-B6B2-BE1D5BDC388C}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{C106D0D9-E435-45C9-B6B2-BE1D5BDC388C}.Debug|x64.Build.0 = Debug|Any CPU
+		{C106D0D9-E435-45C9-B6B2-BE1D5BDC388C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C106D0D9-E435-45C9-B6B2-BE1D5BDC388C}.Debug|x86.Build.0 = Debug|Any CPU
+		{C106D0D9-E435-45C9-B6B2-BE1D5BDC388C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C106D0D9-E435-45C9-B6B2-BE1D5BDC388C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C106D0D9-E435-45C9-B6B2-BE1D5BDC388C}.Release|x64.ActiveCfg = Release|Any CPU
+		{C106D0D9-E435-45C9-B6B2-BE1D5BDC388C}.Release|x64.Build.0 = Release|Any CPU
+		{C106D0D9-E435-45C9-B6B2-BE1D5BDC388C}.Release|x86.ActiveCfg = Release|Any CPU
+		{C106D0D9-E435-45C9-B6B2-BE1D5BDC388C}.Release|x86.Build.0 = Release|Any CPU
+		{C106D0D9-E435-45C9-B6B2-BE1D5BDC388C}.WindowsPhone7|Any CPU.ActiveCfg = WindowsPhone7|Any CPU
+		{C106D0D9-E435-45C9-B6B2-BE1D5BDC388C}.WindowsPhone7|Any CPU.Build.0 = WindowsPhone7|Any CPU
+		{C106D0D9-E435-45C9-B6B2-BE1D5BDC388C}.WindowsPhone7|x64.ActiveCfg = WindowsPhone7|Any CPU
+		{C106D0D9-E435-45C9-B6B2-BE1D5BDC388C}.WindowsPhone7|x64.Build.0 = WindowsPhone7|Any CPU
+		{C106D0D9-E435-45C9-B6B2-BE1D5BDC388C}.WindowsPhone7|x86.ActiveCfg = WindowsPhone7|Any CPU
+		{C106D0D9-E435-45C9-B6B2-BE1D5BDC388C}.WindowsPhone7|x86.Build.0 = WindowsPhone7|Any CPU
+		{35ABFAD5-7196-4197-BBA6-889E178E79F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35ABFAD5-7196-4197-BBA6-889E178E79F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35ABFAD5-7196-4197-BBA6-889E178E79F2}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{35ABFAD5-7196-4197-BBA6-889E178E79F2}.Debug|x64.Build.0 = Debug|Any CPU
+		{35ABFAD5-7196-4197-BBA6-889E178E79F2}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{35ABFAD5-7196-4197-BBA6-889E178E79F2}.Debug|x86.Build.0 = Debug|Any CPU
+		{35ABFAD5-7196-4197-BBA6-889E178E79F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35ABFAD5-7196-4197-BBA6-889E178E79F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35ABFAD5-7196-4197-BBA6-889E178E79F2}.Release|x64.ActiveCfg = Release|Any CPU
+		{35ABFAD5-7196-4197-BBA6-889E178E79F2}.Release|x64.Build.0 = Release|Any CPU
+		{35ABFAD5-7196-4197-BBA6-889E178E79F2}.Release|x86.ActiveCfg = Release|Any CPU
+		{35ABFAD5-7196-4197-BBA6-889E178E79F2}.Release|x86.Build.0 = Release|Any CPU
+		{35ABFAD5-7196-4197-BBA6-889E178E79F2}.WindowsPhone7|Any CPU.ActiveCfg = Release|Any CPU
+		{35ABFAD5-7196-4197-BBA6-889E178E79F2}.WindowsPhone7|Any CPU.Build.0 = Release|Any CPU
+		{35ABFAD5-7196-4197-BBA6-889E178E79F2}.WindowsPhone7|x64.ActiveCfg = Release|Any CPU
+		{35ABFAD5-7196-4197-BBA6-889E178E79F2}.WindowsPhone7|x64.Build.0 = Release|Any CPU
+		{35ABFAD5-7196-4197-BBA6-889E178E79F2}.WindowsPhone7|x86.ActiveCfg = Release|Any CPU
+		{35ABFAD5-7196-4197-BBA6-889E178E79F2}.WindowsPhone7|x86.Build.0 = Release|Any CPU
+		{6197BE34-BF99-48D7-A58B-7ACD81206CC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6197BE34-BF99-48D7-A58B-7ACD81206CC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6197BE34-BF99-48D7-A58B-7ACD81206CC8}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{6197BE34-BF99-48D7-A58B-7ACD81206CC8}.Debug|x64.Build.0 = Debug|Any CPU
+		{6197BE34-BF99-48D7-A58B-7ACD81206CC8}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{6197BE34-BF99-48D7-A58B-7ACD81206CC8}.Debug|x86.Build.0 = Debug|Any CPU
+		{6197BE34-BF99-48D7-A58B-7ACD81206CC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6197BE34-BF99-48D7-A58B-7ACD81206CC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6197BE34-BF99-48D7-A58B-7ACD81206CC8}.Release|x64.ActiveCfg = Release|Any CPU
+		{6197BE34-BF99-48D7-A58B-7ACD81206CC8}.Release|x64.Build.0 = Release|Any CPU
+		{6197BE34-BF99-48D7-A58B-7ACD81206CC8}.Release|x86.ActiveCfg = Release|Any CPU
+		{6197BE34-BF99-48D7-A58B-7ACD81206CC8}.Release|x86.Build.0 = Release|Any CPU
+		{6197BE34-BF99-48D7-A58B-7ACD81206CC8}.WindowsPhone7|Any CPU.ActiveCfg = Release|Any CPU
+		{6197BE34-BF99-48D7-A58B-7ACD81206CC8}.WindowsPhone7|Any CPU.Build.0 = Release|Any CPU
+		{6197BE34-BF99-48D7-A58B-7ACD81206CC8}.WindowsPhone7|x64.ActiveCfg = Release|Any CPU
+		{6197BE34-BF99-48D7-A58B-7ACD81206CC8}.WindowsPhone7|x64.Build.0 = Release|Any CPU
+		{6197BE34-BF99-48D7-A58B-7ACD81206CC8}.WindowsPhone7|x86.ActiveCfg = Release|Any CPU
+		{6197BE34-BF99-48D7-A58B-7ACD81206CC8}.WindowsPhone7|x86.Build.0 = Release|Any CPU
+		{CAC707A0-C944-4DA1-85B4-6F959EB618D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAC707A0-C944-4DA1-85B4-6F959EB618D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAC707A0-C944-4DA1-85B4-6F959EB618D8}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{CAC707A0-C944-4DA1-85B4-6F959EB618D8}.Debug|x64.Build.0 = Debug|Any CPU
+		{CAC707A0-C944-4DA1-85B4-6F959EB618D8}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{CAC707A0-C944-4DA1-85B4-6F959EB618D8}.Debug|x86.Build.0 = Debug|Any CPU
+		{CAC707A0-C944-4DA1-85B4-6F959EB618D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAC707A0-C944-4DA1-85B4-6F959EB618D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CAC707A0-C944-4DA1-85B4-6F959EB618D8}.Release|x64.ActiveCfg = Release|Any CPU
+		{CAC707A0-C944-4DA1-85B4-6F959EB618D8}.Release|x64.Build.0 = Release|Any CPU
+		{CAC707A0-C944-4DA1-85B4-6F959EB618D8}.Release|x86.ActiveCfg = Release|Any CPU
+		{CAC707A0-C944-4DA1-85B4-6F959EB618D8}.Release|x86.Build.0 = Release|Any CPU
+		{CAC707A0-C944-4DA1-85B4-6F959EB618D8}.WindowsPhone7|Any CPU.ActiveCfg = Release|Any CPU
+		{CAC707A0-C944-4DA1-85B4-6F959EB618D8}.WindowsPhone7|Any CPU.Build.0 = Release|Any CPU
+		{CAC707A0-C944-4DA1-85B4-6F959EB618D8}.WindowsPhone7|x64.ActiveCfg = Release|Any CPU
+		{CAC707A0-C944-4DA1-85B4-6F959EB618D8}.WindowsPhone7|x64.Build.0 = Release|Any CPU
+		{CAC707A0-C944-4DA1-85B4-6F959EB618D8}.WindowsPhone7|x86.ActiveCfg = Release|Any CPU
+		{CAC707A0-C944-4DA1-85B4-6F959EB618D8}.WindowsPhone7|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E8F77B72-D637-4D55-B175-4DE154500CAF}
+	EndGlobalSection
+EndGlobal

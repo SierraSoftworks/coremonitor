@@ -1,0 +1,53 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.1//EN">
+<html>
+<head>
+    <title>CoreMonitor
+        <!--CoreMonitorVersion-->
+    </title>
+    <link href="./Style.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="header">  
+        <div id="headertext">
+            <h3>
+                v<!--CoreMonitorVersion--></h3>
+            <a href="http://localhost:56302"><h1>
+                CoreMonitor</h1></a>
+        </div>
+    </div>
+    <div id="body">
+        <h2>HTTP API Documentation</h2>
+        <div id="document">
+            CoreMonitor provides a web based API for controlling notifications displayed on
+            the device. This allows developers to easily control CoreMonitor using nothing more
+            than the user's web browser. The API makes use of HTTP GET requests to a specific
+            URL which are then used to trigger the functions of the device.
+            CoreMonitor also provides an XML based commands API which can be used for more 
+            advanced functions like registering menu items etc.
+            <br />
+            <br />
+            <h3>HTTP API Calling Conventions</h3>
+                Host: <a href="http://localhost:56302">http://localhost:56302</a>
+            <br />
+                Functions:
+            <br />
+                    <a href="http://localhost:56302/notifications" style="padding-left:10px;">Notifications</a> 
+                    <br />
+                    <a href="http://localhost:56302/information" style="padding-left: 10px;">Information</a>
+            <br />
+            <br />
+            <h3>XML API</h3>
+            Host: <a href="http://localhost:56302">http://localhost:56302</a>
+            <br />
+            Functions:
+            <br />
+            <a href="http://localhost:56302/notifications" style="padding-left: 10px;">Notifications</a>
+
+        </div>
+    </div>
+    <div id="footer">
+        Powered by <a href="http://www.sierrasoftworks">Sierra Softworks</a> Technology <br />
+        Copyright &copy; Benjamin Pannell 2011
+    </div>
+</body>
+</html>

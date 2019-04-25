@@ -5,11 +5,14 @@ using CoreAudioApi;
 using System.Diagnostics;
 using System.Management;
 using System.Threading;
+using System.Text.RegularExpressions;
 
 namespace CoreMonitor.SystemInfo
 {
     class SystemInformationProvider
-    {        
+    {
+        public MMDevice DefaultAudioDevice { get; private set; }
+        
         private Microsoft.VisualBasic.Devices.ComputerInfo systemInfo;
         PerformanceCounter totalCPUcounter;
         private List<Core> cores = new List<Core>();
@@ -179,26 +182,27 @@ namespace CoreMonitor.SystemInfo
             }
         }
 
-        public List<VolumeMonitor> AudioDevices
-        { get; private set; }
+        public float CurrentVolume
+        {
+            get;
+            private set;
+        }
+
+        public bool Muted
+        {
+            get;
+            private set;
+        }
+
+        public string DefaultAudioDeviceName
+        {
+            get;
+            private set;
+        }
 
         string GetProcessorName(string processorName,bool showManufacturer = false)
         {
-            string tmp = processorName;
-            if (tmp.StartsWith("Intel(R)"))
-            {
-                string manufacturer = "Intel";
-                string model = tmp.Replace("Intel(R) ", "");
-                model = model.Remove(model.IndexOf("CPU"));
-                model = model.Replace("(TM)", "");
-                model += tmp.Substring(tmp.IndexOf("         "), tmp.IndexOf("@") - tmp.IndexOf("         ")).Trim();
-                model = model.Trim();
-
-                if (showManufacturer)
-                    return manufacturer + " " + model;
-                return model;
-            }
-            return tmp;
+            return Regex.Replace(processorName, @"\(.*?\)|(\s)\s+|@.*|CPU", "", RegexOptions.ExplicitCapture);
         }
 
         public SystemInformationProvider() :
@@ -214,14 +218,21 @@ namespace CoreMonitor.SystemInfo
             totalCPUcounter = new PerformanceCounter("Processor", "% Processor Time", "_Total");
 
             MMDeviceEnumerator audioDeviceEnum = new MMDeviceEnumerator();
-            AudioDevices = new List<VolumeMonitor>();
-            var devices = audioDeviceEnum.EnumerateAudioEndPoints(EDataFlow.eRender, EDeviceState.DEVICE_STATEMASK_ALL);
-            for (int i = 0; i < devices.Count; i++ )
-            {
-                AudioDevices.Add(new VolumeMonitor(devices[i]));
-            }
-            
+            //audioDeviceEnum.EnumerateAudioEndPoints(EDataFlow.eRender, EDeviceState.DEVICE_STATEMASK_ALL);
+            MMDevice defaultAudioDevice = audioDeviceEnum.GetDefaultAudioEndpoint(EDataFlow.eRender, ERole.eMultimedia);
+            //DefaultAudioDevice = defaultAudioDevice;
 
+            DefaultAudioDeviceName = defaultAudioDevice.FriendlyName;
+            CurrentVolume = defaultAudioDevice.AudioEndpointVolume.MasterVolumeLevelScalar;
+            Muted = defaultAudioDevice.AudioEndpointVolume.Mute;
+
+            defaultAudioDevice.AudioEndpointVolume.OnVolumeNotification += (e) =>
+                {
+                    Muted = e.Muted;
+                    CurrentVolume = e.MasterVolume;
+                };
+
+            DefaultAudioDevice = defaultAudioDevice;
 
             //No Leak
             processorInfo = new ManagementObject("Win32_Processor.DeviceID=\"CPU0\"");

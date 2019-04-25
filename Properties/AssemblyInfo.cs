@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("CoreMonitor")]
-[assembly: AssemblyDescription("Provides processor information on a G19 display")]
+[assembly: AssemblyDescription("Displays system information on a G19 LCD Display")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Sierra Softworks")]
 [assembly: AssemblyProduct("CoreMonitor")]
-[assembly: AssemblyCopyright("Copyright © Benjamin Pannell 2012")]
+[assembly: AssemblyCopyright("Copyright © Benjamin Pannell 2011")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("59c1258c-7835-4f0b-ac10-0362ae9c315f")]
+[assembly: Guid("9f338422-8737-40a7-aac1-c5a9b1c30361")]
 
 // Version information for an assembly consists of the following four values:
 //

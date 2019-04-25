@@ -4,9 +4,8 @@ using System.Text;
 using SierraLib.LCD.Logitech;
 using System.Drawing;
 using System.Drawing.Drawing2D;
-using SierraLib.IO.Fonts;
 
-namespace CoreMonitor.LCDControls
+namespace CoreMonitor.Controls
 {
     class Core
     {
@@ -50,7 +49,7 @@ namespace CoreMonitor.LCDControls
             CoreInformation.UsageHistoryCount = ((area.Width - 2) / 4);
 
             //Create the display objects
-            Font headerTextFontSmall = new Font(FontLoader.Fonts.Families[0], 6.0f, FontStyle.Regular, GraphicsUnit.Pixel);
+            Font headerTextFontSmall = new Font(Fonts.FontLoader.Fonts.Families[0], 6.0f, FontStyle.Regular, GraphicsUnit.Pixel);
             Font headerTextFontMedium = new Font("11px2bus", 11.0f, FontStyle.Regular, GraphicsUnit.Pixel);
             Font headerTextFontLarge = new Font("Arial", 22.0f, FontStyle.Regular, GraphicsUnit.Pixel);
 

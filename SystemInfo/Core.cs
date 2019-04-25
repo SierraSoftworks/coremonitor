@@ -22,8 +22,6 @@ namespace CoreMonitor.SystemInfo
         private PerformanceCounter parkedChecker;
         private PerformanceCounter usageChecker;
 
-        public event EventHandler Updated = null;
-
         public DateTime LastUpdate
         {
             get;
@@ -73,12 +71,10 @@ namespace CoreMonitor.SystemInfo
             CurrentUsage = usageChecker.NextValue();
             IsIdle = parkedChecker.NextValue() == 1;
 
-            usageHistory.Add(CurrentUsage);
-            if (usageHistory.Count > usageHistoryCount)
-                usageHistory.RemoveAt(0);
+                usageHistory.Add(CurrentUsage);
+                if (usageHistory.Count > usageHistoryCount)
+                    usageHistory.RemoveAt(0);
 
-            if (Updated != null)
-                Updated(this, new EventArgs());
         }
     }
 }

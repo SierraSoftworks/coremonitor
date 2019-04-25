@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.Text;
 using SierraLib.LCD.Logitech;
+using System.Windows.Forms;
 using System.Drawing.Drawing2D;
 using System.Drawing;
 
-namespace CoreMonitor.LCDControls
+namespace CoreMonitor.Controls
 {
     class Menu
     {
