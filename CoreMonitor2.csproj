@@ -1,0 +1,248 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EC232EE6-E192-4F5F-B379-D50E5DB49119}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CoreMonitor</RootNamespace>
+    <AssemblyName>CoreMonitor</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Performance.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\CoreMonitor.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\CoreMonitor.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\CoreMonitor.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\CoreMonitor.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppletHost.cs" />
+    <Compile Include="Controls\Core.cs" />
+    <Compile Include="Controls\NotificationDisplay.cs" />
+    <Compile Include="Controls\Menu.cs" />
+    <Compile Include="Controls\UpdateDisplay.cs" />
+    <Compile Include="Controls\VolumeDisplay.cs" />
+    <Compile Include="Displays\QVGA.cs" />
+    <Compile Include="Fonts\FontLoader.cs" />
+    <Compile Include="Interop\APIClient.cs" />
+    <Compile Include="Interop\APIServer.cs" />
+    <Compile Include="Interop\MenuDetails.cs" />
+    <Compile Include="Interop\Notification.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="SystemInfo\Core.cs" />
+    <Compile Include="SystemInfo\SystemInformationProvider.cs" />
+    <Compile Include="SystemInfo\Volume\AudioEndpointVolume.cs" />
+    <Compile Include="SystemInfo\Volume\AudioEndpointVolumeCallback.cs" />
+    <Compile Include="SystemInfo\Volume\AudioEndpointVolumeChannel.cs" />
+    <Compile Include="SystemInfo\Volume\AudioEndpointVolumeChannels.cs" />
+    <Compile Include="SystemInfo\Volume\AudioEndpointVolumeNotificationDelegate.cs" />
+    <Compile Include="SystemInfo\Volume\AudioEndpointVolumeStepInformation.cs" />
+    <Compile Include="SystemInfo\Volume\AudioEndPointVolumeVolumeRange.cs" />
+    <Compile Include="SystemInfo\Volume\AudioMeterInformation.cs" />
+    <Compile Include="SystemInfo\Volume\AudioMeterInformationChannels.cs" />
+    <Compile Include="SystemInfo\Volume\AudioSessionControl.cs" />
+    <Compile Include="SystemInfo\Volume\AudioSessionDisconnectReason.cs" />
+    <Compile Include="SystemInfo\Volume\AudioSessionManager.cs" />
+    <Compile Include="SystemInfo\Volume\AudioSessionState.cs" />
+    <Compile Include="SystemInfo\Volume\AudioVolumeNotificationData.cs" />
+    <Compile Include="SystemInfo\Volume\EDataFlow.cs" />
+    <Compile Include="SystemInfo\Volume\EDeviceState.cs" />
+    <Compile Include="SystemInfo\Volume\EEndpointHardwareSupport.cs" />
+    <Compile Include="SystemInfo\Volume\ERole.cs" />
+    <Compile Include="SystemInfo\Volume\Interfaces\AUDIO_VOLUME_NOTIFICATION_DATA.cs" />
+    <Compile Include="SystemInfo\Volume\Interfaces\Blob.cs" />
+    <Compile Include="SystemInfo\Volume\Interfaces\CLSCTX.cs" />
+    <Compile Include="SystemInfo\Volume\Interfaces\eStgmAccess.cs" />
+    <Compile Include="SystemInfo\Volume\Interfaces\IAudioEndpointVolume.cs" />
+    <Compile Include="SystemInfo\Volume\Interfaces\IAudioEndpointVolumeCallback.cs" />
+    <Compile Include="SystemInfo\Volume\Interfaces\IAudioMeterInformation.cs" />
+    <Compile Include="SystemInfo\Volume\Interfaces\IAudioPeakMeter.cs" />
+    <Compile Include="SystemInfo\Volume\Interfaces\IAudioSessionControl2.cs" />
+    <Compile Include="SystemInfo\Volume\Interfaces\IAudioSessionEnumerator.cs" />
+    <Compile Include="SystemInfo\Volume\Interfaces\IAudioSessionEvents.cs" />
+    <Compile Include="SystemInfo\Volume\Interfaces\IAudioSessionManager2.cs" />
+    <Compile Include="SystemInfo\Volume\Interfaces\IMMDevice.cs" />
+    <Compile Include="SystemInfo\Volume\Interfaces\IMMDeviceCollection.cs" />
+    <Compile Include="SystemInfo\Volume\Interfaces\IMMDeviceEnumerator.cs" />
+    <Compile Include="SystemInfo\Volume\Interfaces\IMMEndpoint.cs" />
+    <Compile Include="SystemInfo\Volume\Interfaces\IPropertyStore.cs" />
+    <Compile Include="SystemInfo\Volume\Interfaces\ISimpleAudioVolume.cs" />
+    <Compile Include="SystemInfo\Volume\MMDevice.cs" />
+    <Compile Include="SystemInfo\Volume\MMDeviceCollection.cs" />
+    <Compile Include="SystemInfo\Volume\MMDeviceEnumerator.cs" />
+    <Compile Include="SystemInfo\Volume\PKEY.cs" />
+    <Compile Include="SystemInfo\Volume\PropertyKey.cs" />
+    <Compile Include="SystemInfo\Volume\PropertyStore.cs" />
+    <Compile Include="SystemInfo\Volume\PropertyStoreProperty.cs" />
+    <Compile Include="SystemInfo\Volume\PropVariant.cs" />
+    <Compile Include="SystemInfo\Volume\SessionCollection.cs" />
+    <Compile Include="SystemInfo\Volume\SimpleAudioVolume.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <EmbeddedResource Include="Fonts\6px2bus.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="HTML\Information.htm" />
+    <Content Include="HTML\HomePage.htm" />
+    <Content Include="HTML\Notifications.htm" />
+    <Content Include="HTML\Style.css" />
+    <Content Include="Performance.ico" />
+    <None Include="Resources\Delete.ico" />
+    <None Include="Resources\Settings Saved.ico" />
+    <None Include="Resources\Performance.ico" />
+    <Content Include="Updates.xml">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Libraries\SierraLib\SierraLib.CSharp\SierraLib.CSharp.csproj">
+      <Project>{35abfad5-7196-4197-bba6-889e178e79f2}</Project>
+      <Name>SierraLib.CSharp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Libraries\SierraLib\SierraLib.Drawing\SierraLib.Drawing.csproj">
+      <Project>{c106d0d9-e435-45c9-b6b2-be1d5bdc388c}</Project>
+      <Name>SierraLib.Drawing</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Libraries\SierraLib\SierraLib.IO\SierraLib.IO.csproj">
+      <Project>{6e3964da-ab7b-4650-8e07-d43d9c7fe8ab}</Project>
+      <Name>SierraLib.IO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Libraries\SierraLib\SierraLib.LCD\SierraLib.LCD.csproj">
+      <Project>{d21841e8-1be3-4761-925f-71595e2015be}</Project>
+      <Name>SierraLib.LCD</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Libraries\SierraLib\SierraLib.Net\SierraLib.Net.csproj">
+      <Project>{6197be34-bf99-48d7-a58b-7acd81206cc8}</Project>
+      <Name>SierraLib.Net</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Libraries\SierraLib\SierraLib.Windows\SierraLib.Windows.csproj">
+      <Project>{cac707a0-c944-4da1-85b4-6f959eb618d8}</Project>
+      <Name>SierraLib.Windows</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

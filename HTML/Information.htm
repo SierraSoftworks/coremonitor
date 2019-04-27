@@ -1,0 +1,38 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+	<head>
+        <link rel="Stylesheet" type="text/css" href="Style.css" />
+		<title>CoreMonitor - Notifications</title>
+	</head>
+	<body>
+   <div id="header">  
+        <div id="headertext">
+            <h3>
+                v<!--CoreMonitorVersion--></h3>
+            <a href="http://localhost:56302"><h1>
+                CoreMonitor</h1></a>
+        </div>
+    </div>
+    <div id="body">
+        <h2>Notifications API</h2>
+        <div id="document">
+            Part of the CoreMonitor WebAPI is the Information interface which provides information about an existing CoreMonitor instance
+            to the device through web requests. <br />
+            Web requests are made using either HTTP GET or HTTP POST requests to the <a href="http://localhost:56302/system">/system/*</a> pages<br />
+            The following are the currently available Information pages
+            <ul>
+            <li><a href="http://localhost:56302/system/version">http://localhost:56302/system/version</a><br />
+            Returns the current CoreMonitor version running on the system
+            </li>
+            <li><a href="http://localhost:56302/system/version/show">http://localhost:56302/system/version/show</a><br />
+            Shows the current CoreMonitor version running on the system as a notification on the device
+            </li>
+            </ul>
+        </div>
+    </div>
+    <div id="footer">
+        Powered by <a href="http://www.sierrasoftworks">Sierra Softworks</a> Technology <br />
+        Copyright &copy; Benjamin Pannell 2011
+    </div>
+	</body>
+</html>
